@@ -1,0 +1,21 @@
+
+
+const PolygonSelected = async () => {
+        if (window.ethereum) { // Checking if metamask is installed
+            const provider = window.ethereum; // if yes, checking if the user is connected and getting his account
+            const web3 = new Web3(provider);
+            const accounts = await web3.eth.getAccounts();
+            if (accounts.length < 1) { // if the user is not connected, requesting metamask authentication
+                const current = await provider.request({const current = await provider.request({
+                    method: "eth_requestAccounts",
+                });
+} else {
+            window.alert('You need to have Metamask installed to continue!');
+        }
+    }
+
+
+
+    *Button*
+    <Button className="btn-icon btn-2" color="default" type="button" style={{ width: 100, marginBottom: 20 }} onClick={FlowSelected}> 
+    Select </Button>
